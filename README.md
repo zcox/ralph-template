@@ -7,5 +7,14 @@ Based on and inspired by:
 
 ![](./ralph_factory.png)
 
-Getting started:
-- 
+```sh
+mkdir your-project
+cd your-project
+
+curl -L https://github.com/zcox/ralph-template/archive/HEAD.tar.gz | tar xz --strip-components=1
+
+echo "describe your idea in raw notes" >> ideas/1.md
+
+claude
+> /specs ideas/1.md
+```
