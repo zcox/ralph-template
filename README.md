@@ -28,4 +28,10 @@ echo "describe your idea in raw notes" > ideas/1.md
 # tell claude to turn your idea into specs
 claude
 > /specs ideas/1.md
+
+# tell ralph to plan
+./loop.sh plan
+
+# tell ralph to build
+./loop.sh build
 ```
