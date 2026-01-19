@@ -18,6 +18,10 @@ curl -L https://github.com/zcox/ralph-template/archive/HEAD.tar.gz | tar xz --st
 # delete some junk
 rm ralph_factory.png README.md
 
+# version control is important
+git init
+git add . && git commit -m "first"
+
 # create your first idea (edit this file however you want)
 echo "describe your idea in raw notes" > ideas/1.md
 
