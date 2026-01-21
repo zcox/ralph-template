@@ -30,8 +30,11 @@ claude
 > /specs ideas/1.md
 
 # tell ralph to plan
-./loop.sh plan 2
+./step-plan.sh
 
 # tell ralph to build
-./loop.sh 5
+./step-build.sh
+
+# when you trust ralph
+./loop-build.sh 10
 ```
