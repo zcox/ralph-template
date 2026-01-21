@@ -38,8 +38,12 @@ echo "describe your idea in raw notes" > ideas/1.md
 claude
 > /specs ideas/1.md
 
+# now look in specs/ and iterate on them with CC until you're happy
+
 # tell ralph to plan
 ./step-plan.sh
+
+# now read IMPLEMENTATION_PLAN.md and iterate on it with CC until you're happy
 
 # tell ralph to build
 ./step-build.sh
@@ -47,5 +51,7 @@ claude
 # when you trust ralph
 ./loop-build.sh 10
 
-# iterate on PROMPT_plan.md and PROMPT_build.md to customize for your project
+# check on Ralph's work every so often, and steer him back on-track as needed
+
+# iterate on PROMPT_plan.md and PROMPT_build.md so they work better for your project
 ```
