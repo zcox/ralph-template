@@ -9,10 +9,11 @@ Based on and inspired by:
 
 ```mermaid
 graph LR
-    A[Idea] --> B[specs/]
+    A[Idea] --> B[(specs/)]
     B --> C[Plan]
-    C --> D[IMPLEMENTATION_PLAN.md]
+    C --> D[(IMPLEMENTATION_PLAN.md)]
     D --> E[Build]
+    B --> E
 ```
 
 ```sh
