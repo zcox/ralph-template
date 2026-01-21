@@ -37,4 +37,6 @@ claude
 
 # when you trust ralph
 ./loop-build.sh 10
+
+# iterate on PROMPT_plan.md and PROMPT_build.md to customize for your project
 ```
