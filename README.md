@@ -7,6 +7,12 @@ Based on and inspired by:
 
 ![](./ralph_factory.png)
 
+```mermaid
+graph LR
+    A[Idea] --> B[Plan]
+    B --> C[Build]
+```
+
 ```sh
 # create your project directory
 mkdir your-project
