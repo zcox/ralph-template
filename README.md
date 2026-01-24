@@ -11,7 +11,7 @@ Based on and inspired by:
 graph LR
     A[Idea] --> B[/specs/\]
     B --> C[Plan]
-    C --> D[/specs/{spec-name}/tasks/\]
+    C --> D[/specs/spec-name/tasks/\]
     D --> E[Implement]
     B --> E
 ```
