@@ -1,14 +1,14 @@
 ---
-argument-hint: [idea-file]
 description: Claude interviews you about your idea and creates specs.
+argument-hint: [idea-file]
 model: claude-opus-4-5
 ---
 
+study idea in $ARGUMENTS
 study specs/README.md
-study idea in $1
 
 rename the idea file to something sensible.
-start creating a new spec based on the idea.
+start creating new specs based on the idea.
 let's have a discussion and you can interview me using the AskUserQuestion tool.
 
 #### Concepts
@@ -17,8 +17,8 @@ let's have a discussion and you can interview me using the AskUserQuestion tool.
 | ----------------------- | --------------------------------------------------------------- |
 | _Job to be Done (JTBD)_ | High-level user need or outcome                                 |
 | _Topic of Concern_      | A distinct aspect/component within a JTBD                       |
-| _Spec_                  | Requirements doc for one topic of concern (`specs/FILENAME.md`) |
-| _Task_                  | Unit of work derived from comparing specs to code               |
+| _Spec_                  | Specifications doc for one topic of concern (`specs/{spec-name}/README.md`) |
+| _Task_                  | Unit of work derived from comparing specs to code (`specs/{spec-name}/tasks/`) |
 
 _Relationships:_
 

@@ -2,7 +2,7 @@
 
 # Check if argument is provided
 if [ $# -eq 0 ]; then
-    echo "Error: Please provide the number of times to run step-build.sh"
+    echo "Error: Please provide the number of times to run step.sh"
     echo "Usage: $0 <number>"
     exit 1
 fi
@@ -16,20 +16,20 @@ fi
 
 count=$1
 
-# Check if step-build.sh exists
-if [ ! -f "step-build.sh" ]; then
-    echo "Error: step-build.sh not found in current directory"
+# Check if step.sh exists
+if [ ! -f "step.sh" ]; then
+    echo "Error: step.sh not found in current directory"
     exit 1
 fi
 
-# Loop and call step-build.sh
-echo "Running step-build.sh $count times..."
+# Loop and call step.sh
+echo "Running step.sh $count times..."
 for ((i=1; i<=count; i++)); do
     echo ""
     echo "=== Iteration $i of $count ==="
-    ./step-build.sh
+    ./step.sh
     if [ $? -ne 0 ]; then
-        echo "Error: step-build.sh failed on iteration $i"
+        echo "Error: step.sh failed on iteration $i"
         exit 1
     fi
 done

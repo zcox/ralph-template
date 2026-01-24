@@ -2,10 +2,12 @@
 
 Design documentation for {the project}, {short overview of the project}.
 
-Claude Code: create new spec files in this directory and add links to them below.
+## Current Status Notes
 
-## {Some System}
+{Brief, always up-to-date notes about current status of things, what's in-progress, what next highest priority is, etc}
 
-| Spec | Code | Purpose |
-|------|------|---------|
-| [example.md](./example.md) | [example/](../example/) | {Short overview of what this part is} |
+## {Some Higher-Level Job To Be Done}
+
+| Status | Spec | Purpose |
+|--------|------|---------|
+| 🔲 | [Spec Name](./{spec-name}/README.md) | {Short overview of the spec's topic of concern} |

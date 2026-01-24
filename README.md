@@ -11,8 +11,8 @@ Based on and inspired by:
 graph LR
     A[Idea] --> B[/specs/\]
     B --> C[Plan]
-    C --> D[/IMPLEMENTATION_PLAN.md\]
-    D --> E[Build]
+    C --> D[/specs/{spec-name}/tasks/\]
+    D --> E[Implement]
     B --> E
 ```
 
@@ -35,23 +35,21 @@ git add . && git commit -m "first"
 echo "describe your idea in raw notes" > ideas/1.md
 
 # tell claude to turn your idea into specs
-claude
-> /specs ideas/1.md
+claude "/specify-idea ideas/1.md"
 
 # now look in specs/ and iterate on them with CC until you're happy
 
-# tell ralph to plan
-./step-plan.sh
+claude "/plan-specs"
 
-# now read IMPLEMENTATION_PLAN.md and iterate on it with CC until you're happy
+# now read through the tasks and iterate with CC until you're happy
 
-# tell ralph to build
-./step-build.sh
+# tell ralph to implement the next task
+./step.sh
 
-# when you trust ralph
-./loop-build.sh 10
+# when you trust ralph, send him off to impelement many tasks
+./loop.sh 10
 
 # check on Ralph's work every so often, and steer him back on-track as needed
 
-# iterate on PROMPT_plan.md and PROMPT_build.md so they work better for your project
+# iterate on the skills so they work better for your project
 ```
