@@ -39,7 +39,8 @@ claude "/specify-idea ideas/1.md"
 
 # now look in specs/ and iterate on them with CC until you're happy
 
-claude "/plan-specs"
+# plan tasks for the highest priority spec. you can run this a few times to fill things out.
+claude "/plan-next-spec"
 
 # now read through the tasks and iterate with CC until you're happy
 
