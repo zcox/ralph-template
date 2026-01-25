@@ -20,11 +20,23 @@ if .type == "assistant" and (.message.content // null) then
       elif .name == "Task" then
         "[\u001b[1;35m⚡\u001b[0m] Subagent: \(.input.subagent_type) - \(.input.description)"
       elif .name == "Write" then
-        "[\u001b[1;33m→\u001b[0m] \(.name): \(.input.file_path | split("/")[-1])"
+        "[\u001b[1;33m→\u001b[0m] \(.name): \(.input.file_path)"
       elif .name == "Edit" then
-        "[\u001b[1;33m→\u001b[0m] \(.name): \(.input.file_path | split("/")[-1])"
+        "[\u001b[1;33m→\u001b[0m] \(.name): \(.input.file_path)"
       elif .name == "Read" then
-        "[\u001b[1;33m→\u001b[0m] \(.name): \(.input.file_path | split("/")[-1])"
+        "[\u001b[1;33m→\u001b[0m] \(.name): \(.input.file_path)"
+      elif .name == "Grep" then
+        "[\u001b[1;33m→\u001b[0m] \(.name): pattern=\(.input.pattern)\(if .input.path then " path=\(.input.path)" else "" end)\(if .input.output_mode then " mode=\(.input.output_mode)" else "" end)\(if .input.glob then " glob=\(.input.glob)" else "" end)"
+      elif .name == "Glob" then
+        "[\u001b[1;33m→\u001b[0m] \(.name): pattern=\(.input.pattern)\(if .input.path then " path=\(.input.path)" else "" end)"
+      elif .name == "TodoWrite" then
+        "[\u001b[1;33m→\u001b[0m] \(.name): \(.input.todos | length) todos (\([.[] | .status] | group_by(.) | map("\(.[0]):\(length)") | join(", ")))"
+      elif .name == "Skill" then
+        if .input.args then
+          "[\u001b[1;35m✦\u001b[0m] Skill: \(.input.skill) \(.input.args)"
+        else
+          "[\u001b[1;35m✦\u001b[0m] Skill: \(.input.skill)"
+        end
       else
         "[\u001b[1;33m→\u001b[0m] \(.name)"
       end

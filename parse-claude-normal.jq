@@ -36,6 +36,12 @@ if .type == "assistant" and (.message.content // null) then
         "[\u001b[1;33mTOOL\u001b[0m] \(.name): \(.input.pattern)\(.input.path // "")"
       elif .name == "TodoWrite" then
         "[\u001b[1;33mTOOL\u001b[0m] \(.name): \(.input.todos | length) todos"
+      elif .name == "Skill" then
+        if .input.args then
+          "[\u001b[1;35mSKILL\u001b[0m] \(.input.skill) \(.input.args)"
+        else
+          "[\u001b[1;35mSKILL\u001b[0m] \(.input.skill)"
+        end
       else
         "[\u001b[1;33mTOOL\u001b[0m] \(.name)"
       end
