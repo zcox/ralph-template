@@ -24,6 +24,10 @@ cd your-project
 # get this template
 curl -L https://github.com/zcox/ralph-template/archive/HEAD.tar.gz | tar xz --strip-components=1
 
+# skill that teaches claude to use the web app in a browser
+mkdir -p .claude/skills/agent-browser
+curl -o .claude/skills/agent-browser/SKILL.md https://raw.githubusercontent.com/vercel-labs/agent-browser/main/skills/agent-browser/SKILL.md
+
 # delete some junk
 rm ralph_factory.png README.md
 
