@@ -10,7 +10,7 @@ study specs/README.md
 rename the idea file to something sensible.
 start creating new specs based on the idea.
 let's have a discussion and you can interview me using the AskUserQuestion tool.
-you must only create the specs, not any tasks. we'll plan out the tasks in the future.
+you must only create the specs, not any tasks. do not create the specs/{spec-name}/tasks/README.md file yet. we'll plan out the tasks in the future.
 
 #### Concepts
 
