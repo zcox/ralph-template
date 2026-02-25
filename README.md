@@ -51,13 +51,30 @@ claude "/plan-next-spec"
 # tell ralph to implement the next task
 ./step.sh
 
-# when you trust ralph, send him off to impelement many tasks
+# when you trust ralph, send him off to implement many tasks
 ./loop.sh 10
+
+# exit early if ralph signals all tasks are done
+./loop.sh -d 10
 
 # check on Ralph's work every so often, and steer him back on-track as needed
 
 # iterate on the skills so they work better for your project
 ```
+
+## Meta Scripts
+
+### scripts/meta/ralph-init.sh
+
+Bootstraps a new project from ralph-template. Given a project name and an idea (from a file, stdin, or `-m`), it creates the project directory, downloads and unpacks ralph-template, adds the agent-browser skill, writes the idea to `ideas/<project-name>.md`, and initializes a git repository.
+
+```sh
+scripts/meta/ralph-init.sh my-app ideas/my-app.md
+scripts/meta/ralph-init.sh my-api -m "REST API for managing widgets"
+echo "Build a CLI tool" | scripts/meta/ralph-init.sh my-cli -
+```
+
+Options: `-d <dir>` for parent directory, `-c <file>` for a custom `CLAUDE.md`, `-t <dir>` for a local template path instead of cloning from GitHub.
 
 ## Concurrency
 
